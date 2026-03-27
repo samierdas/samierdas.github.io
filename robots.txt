@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samierdas.github.io/sitemap.xml
