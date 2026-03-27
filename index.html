@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sami Bülent Erdaş | Endüstri Mühendisi</title>
     <style>
         * {
@@ -18,13 +18,11 @@
             line-height: 1.5;
         }
 
-        /* Layout */
         .app-container {
             display: flex;
             min-height: 100vh;
         }
 
-        /* SIDEBAR - Dikey menü */
         .sidebar {
             width: 280px;
             background-color: #0f0f0f;
@@ -47,11 +45,6 @@
         .sidebar-header h2 {
             color: #d4af37;
             font-size: 1.3rem;
-        }
-
-        .sidebar-header p {
-            font-size: 0.8rem;
-            color: #aaa;
         }
 
         .nav-menu {
@@ -86,17 +79,11 @@
             border-color: #d4af37;
         }
 
-        .nav-btn:hover i, .nav-btn.active i {
-            color: #0a0a0a;
-        }
-
-        /* MAIN CONTENT */
         .main-content {
             flex: 1;
             overflow-x: hidden;
         }
 
-        /* Header with language flags */
         .top-bar {
             background-color: #0f0f0f;
             padding: 0.8rem 2rem;
@@ -127,7 +114,6 @@
             transform: scale(1.05);
         }
 
-        /* Content sections */
         .content-section {
             display: none;
             padding: 2rem 2.5rem;
@@ -143,7 +129,6 @@
             to { opacity: 1; transform: translateY(0);}
         }
 
-        /* Cards, grids */
         .projects-grid, .skills-grid, .certs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -161,10 +146,6 @@
 
         .project-card:hover, .skill-category:hover {
             border-color: #d4af37;
-        }
-
-        h1, h2, h3 {
-            font-weight: 600;
         }
 
         h2 {
@@ -195,17 +176,11 @@
             color: #0a0a0a;
         }
 
-        hr {
-            border-color: #2a2a2a;
-            margin: 1rem 0;
-        }
-
         .contact-info a {
             color: #d4af37;
             text-decoration: none;
         }
 
-        /* responsive */
         @media (max-width: 768px) {
             .app-container {
                 flex-direction: column;
@@ -237,11 +212,10 @@
 </head>
 <body>
 <div class="app-container">
-    <!-- SIDEBAR -->
     <div class="sidebar">
         <div class="sidebar-header">
             <h2>Sami Bülent Erdaş</h2>
-            <p>Endüstri Mühendisi</p>
+            <p>Industrial Engineer</p>
         </div>
         <div class="nav-menu">
             <button class="nav-btn" data-section="home">🏠 <span data-lang-key="menu_home">Ana Sayfa</span></button>
@@ -257,7 +231,6 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
     <div class="main-content">
         <div class="top-bar">
             <div class="lang-selector">
@@ -266,7 +239,6 @@
             </div>
         </div>
 
-        <!-- HOME SECTION -->
         <div id="home" class="content-section active-section">
             <h1>Sami Bülent Erdaş</h1>
             <p class="gold-text" style="font-size:1.3rem; margin-bottom:0.5rem;" data-lang-key="hero_title">Endüstri Mühendisi | 25+ Yıl Deneyim</p>
@@ -277,79 +249,63 @@
             </div>
         </div>
 
-        <!-- COVER LETTER -->
         <div id="coverletter" class="content-section">
             <h2 data-lang-key="cover_title">Ön Yazı</h2>
             <div class="experience-item">
-                <p data-lang-key="cover_text1">Sayın İlgili, 25 yılı aşkın süredir elektronik ve kimya sektörlerinde üretim mühendisliği, stratejik planlama ve verimlilik optimizasyonu alanlarında edindiğim kapsamlı deneyimle, şirketinizin üretim departmanına değer katabileceğime inanıyorum. Vestel Elektronik'te geçirdiğim 21 yılda, Pilot Üretim Liderliği'nden Üretim Uzmanlığı'na uzanan geniş bir yelpazede görev aldım.</p>
-                <p data-lang-key="cover_text2">• 800 kişilik üretim departmanı için stratejik kapasite ve norm kadro planlamaları yönettim.<br>• Make or Buy analizleri ile stratejik kaynak planlama kararlarına destek sağladım.<br>• C# ve SQL kullanarak 800+ çalışanın eğitim yönetim sistemini sıfırdan geliştirdim.<br>• World Class Manufacturing (WCM) metodolojisi ile verimlilik iyileştirme projeleri yürüttüm.</p>
-                <p data-lang-key="cover_text3">Manisa Celal Bayar Üniversitesi'ndeki lisans tez çalışmamda, karmaşık üretim planlama problemlerine hızlı ve etkin çözümler üretme yetkinliğimi %94.86 yakınsama oranı ile kanıtladım. Peritus Boya'da sürdürdüğüm Üretim ve Planlama Mühendisi pozisyonunda, elektronik sektöründen edindiğim bilgi birikimini kimya sektörüne başarıyla adapte ettim.</p>
-                <p data-lang-key="cover_text4">SAP, C#, SQL, İleri Excel gibi teknik yetkinliklerimin yanı sıra, disiplinlerarası ekip çalışması, problem çözme ve süreç iyileştirme konularında güçlü bir altyapıya sahibim. Görüşme fırsatı verirseniz, deneyim ve yetkinliklerimi daha detaylı paylaşmaktan memnuniyet duyarım. Saygılarımla.</p>
+                <div data-lang-key="cover_text1"><p>Sayın İlgili, 25 yılı aşkın süredir elektronik ve kimya sektörlerinde üretim mühendisliği, stratejik planlama ve verimlilik optimizasyonu alanlarında edindiğim kapsamlı deneyimle, şirketinizin üretim departmanına değer katabileceğime inanıyorum. Vestel Elektronik'te geçirdiğim 21 yılda, Pilot Üretim Liderliği'nden Üretim Uzmanlığı'na uzanan geniş bir yelpazede görev aldım.</p>
+                <p>• 800 kişilik üretim departmanı için stratejik kapasite ve norm kadro planlamaları yönettim.<br>• Make or Buy analizleri ile stratejik kaynak planlama kararlarına destek sağladım.<br>• C# ve SQL kullanarak 800+ çalışanın eğitim yönetim sistemini sıfırdan geliştirdim.<br>• World Class Manufacturing (WCM) metodolojisi ile verimlilik iyileştirme projeleri yürüttüm.</p>
+                <p>Manisa Celal Bayar Üniversitesi'ndeki lisans tez çalışmamda, karmaşık üretim planlama problemlerine hızlı ve etkin çözümler üretme yetkinliğimi %94.86 yakınsama oranı ile kanıtladım. Peritus Boya'da sürdürdüğüm Üretim ve Planlama Mühendisi pozisyonunda, elektronik sektöründen edindiğim bilgi birikimini kimya sektörüne başarıyla adapte ettim.</p>
+                <p>SAP, C#, SQL, İleri Excel gibi teknik yetkinliklerimin yanı sıra, disiplinlerarası ekip çalışması, problem çözme ve süreç iyileştirme konularında güçlü bir altyapıya sahibim. Görüşme fırsatı verirseniz, deneyim ve yetkinliklerimi daha detaylı paylaşmaktan memnuniyet duyarım. Saygılarımla.</p></div>
+                <div data-lang-key="cover_text2" style="display:none;"><p>Dear Hiring Manager, With over 25 years of experience in production engineering, strategic planning, and efficiency optimization across electronics and chemical industries, I am confident in my ability to contribute to your production department. During my 21 years at Vestel Electronics, I held various roles from Pilot Production Leader to Production Specialist.</p>
+                <p>• Managed strategic capacity and headcount planning for an 800-person production department.<br>• Supported strategic sourcing decisions with Make or Buy analyses.<br>• Developed a training management system for 800+ employees from scratch using C# and SQL.<br>• Led productivity improvement projects using World Class Manufacturing (WCM) methodology.</p>
+                <p>In my undergraduate thesis at Manisa Celal Bayar University, I demonstrated my ability to solve complex production planning problems efficiently, achieving a 94.86% convergence rate to the CPLEX optimal solution using a heuristic algorithm. In my current role as Production & Planning Engineer at Peritus Boya, I successfully adapted my electronics sector experience to the chemical industry.</p>
+                <p>Beyond technical skills in SAP, C#, SQL, and Advanced Excel, I bring strong cross-functional team collaboration, problem-solving, and process improvement capabilities. I would welcome the opportunity to discuss how my experience aligns with your company's goals. Sincerely.</p></div>
             </div>
         </div>
 
-        <!-- ABOUT -->
         <div id="about" class="content-section">
             <h2 data-lang-key="about_title">Hakkımda</h2>
-            <p data-lang-key="about_text">Merhaba, ben Sami Bülent Erdaş. Endüstri Mühendisiyim ve 25 yılı aşkın süredir elektronik, üretim planlama ve endüstriyel verimlilik alanlarında çalışıyorum. Vestel Elektronik'te geçirdiğim 21 yıl boyunca Pilot Üretim Liderliği, Uygulama Mühendisliği, Ürün Ağacı Yönetimi ve World Class Manufacturing (WCM) süreçlerinde görev aldım. Şu anda Peritus Boya'da Üretim ve Planlama Mühendisi olarak kimya sektöründe üretim optimizasyonu projeleri yürütüyorum. Analitik düşünce, veriye dayalı karar alma ve disiplinlerarası ekip yönetimi konularında güçlüyüm. İleri Excel ve VBA ile büyük veri setlerini analiz ederek iş kararlarını veriyle destekliyorum.</p>
+            <div data-lang-key="about_text"><p>Merhaba, ben Sami Bülent Erdaş. Endüstri Mühendisiyim ve 25 yılı aşkın süredir elektronik, üretim planlama ve endüstriyel verimlilik alanlarında çalışıyorum. Vestel Elektronik'te geçirdiğim 21 yıl boyunca Pilot Üretim Liderliği, Uygulama Mühendisliği, Ürün Ağacı Yönetimi ve World Class Manufacturing (WCM) süreçlerinde görev aldım. Şu anda Peritus Boya'da Üretim ve Planlama Mühendisi olarak kimya sektöründe üretim optimizasyonu projeleri yürütüyorum. Analitik düşünce, veriye dayalı karar alma ve disiplinlerarası ekip yönetimi konularında güçlüyüm. İleri Excel ve VBA ile büyük veri setlerini analiz ederek iş kararlarını veriyle destekliyorum.</p></div>
+            <div data-lang-key="about_text_en" style="display:none;"><p>Hello, I'm Sami Bülent Erdaş. I am an Industrial Engineer with over 25 years of experience in electronics, production planning, and industrial efficiency. During my 21 years at Vestel Electronics, I worked in roles including Pilot Production Leader, Application Engineering, Bill of Materials Management, and World Class Manufacturing (WCM) processes. Currently, as Production & Planning Engineer at Peritus Boya, I lead production optimization projects in the chemical industry. I am skilled in analytical thinking, data-driven decision making, and cross-functional team management. I use Advanced Excel and VBA to analyze large datasets and support business decisions with data.</p></div>
         </div>
 
-        <!-- EXPERIENCE (kısa özet) -->
         <div id="experience" class="content-section">
             <h2 data-lang-key="exp_title">İş Deneyimi</h2>
-            <div class="experience-item"><h3>Üretim ve Planlama Mühendisi</h3><p class="gold-text">Peritus Boya | 2023-2026</p><p data-lang-key="exp_peritus">Tedarik zinciri yönetimi, envanter kontrolü, üretim planlama ve kapasite optimizasyonu.</p></div>
-            <div class="experience-item"><h3>Endüstri Mühendisi / Üretim Uzmanı</h3><p class="gold-text">Vestel Elektronik | 2002-2023 (21 Yıl)</p><p data-lang-key="exp_vestel">WCM, yıllık bütçe ve norm kadro planlamaları, Make or Buy analizleri, MES/MOM sistem geliştirme, Linux tabanlı yazılım opsiyonları, TPM & Yalın Üretim uygulamaları, 800 kişilik departmanda stratejik kapasite planlaması.</p></div>
+            <div data-lang-key="exp_content"><div class="experience-item"><h3>Üretim ve Planlama Mühendisi</h3><p class="gold-text">Peritus Boya | 2023-2026</p><p>Tedarik zinciri yönetimi, envanter kontrolü, üretim planlama ve kapasite optimizasyonu.</p></div>
+            <div class="experience-item"><h3>Endüstri Mühendisi / Üretim Uzmanı</h3><p class="gold-text">Vestel Elektronik | 2002-2023 (21 Yıl)</p><p>WCM, yıllık bütçe ve norm kadro planlamaları, Make or Buy analizleri, MES/MOM sistem geliştirme, Linux tabanlı yazılım opsiyonları, TPM & Yalın Üretim uygulamaları, 800 kişilik departmanda stratejik kapasite planlaması.</p></div></div>
+            <div data-lang-key="exp_content_en" style="display:none;"><div class="experience-item"><h3>Production & Planning Engineer</h3><p class="gold-text">Peritus Boya | 2023-2026</p><p>Supply chain management, inventory control, production planning and capacity optimization.</p></div>
+            <div class="experience-item"><h3>Industrial Engineer / Production Specialist</h3><p class="gold-text">Vestel Electronics | 2002-2023 (21 Years)</p><p>WCM, annual budget and headcount planning, Make or Buy analyses, MES/MOM system development, Linux-based software options, TPM & Lean Manufacturing implementations, strategic capacity planning for 800-person department.</p></div></div>
         </div>
 
-        <!-- SKILLS (vurgu C# ve Excel) -->
         <div id="skills" class="content-section">
             <h2 data-lang-key="skills_title">Yetenekler</h2>
-            <div class="skills-grid">
-                <div class="skill-category"><h3>📊 Teknik Yetenekler</h3><ul><li>C# / .NET Framework</li><li>SQL / MS SQL Server</li><li><strong>İleri Excel / VBA</strong> – Büyük veri setleri analizi, dinamik formüller, makro otomasyonları, Power Query, pivot tablolar, veri modelleme</li><li>Power BI / Tableau</li><li>MS Access</li></ul></div>
-                <div class="skill-category"><h3>🏭 Mühendislik Yetkinlikleri</h3><ul><li>ERP / SAP R/3 / SAP NetWeaver</li><li>Yalın Üretim / Kaizen / 5S / TPM / WCM</li><li>SMED / Süreç optimizasyonu</li><li>Tedarik zinciri yönetimi / Bütçe planlama</li></ul></div>
-            </div>
+            <div data-lang-key="skills_content"><div class="skills-grid"><div class="skill-category"><h3>📊 Teknik Yetenekler</h3><ul><li>C# / .NET Framework</li><li>SQL / MS SQL Server</li><li><strong>İleri Excel / VBA</strong> – Büyük veri setleri analizi, dinamik formüller, makro otomasyonları, Power Query, pivot tablolar, veri modelleme</li><li>Power BI / Tableau</li><li>MS Access</li></ul></div><div class="skill-category"><h3>🏭 Mühendislik Yetkinlikleri</h3><ul><li>ERP / SAP R/3 / SAP NetWeaver</li><li>Yalın Üretim / Kaizen / 5S / TPM / WCM</li><li>SMED / Süreç optimizasyonu</li><li>Tedarik zinciri yönetimi / Bütçe planlama</li></ul></div></div></div>
+            <div data-lang-key="skills_content_en" style="display:none;"><div class="skills-grid"><div class="skill-category"><h3>📊 Technical Skills</h3><ul><li>C# / .NET Framework</li><li>SQL / MS SQL Server</li><li><strong>Advanced Excel / VBA</strong> – Large dataset analysis, dynamic formulas, macro automation, Power Query, pivot tables, data modeling</li><li>Power BI / Tableau</li><li>MS Access</li></ul></div><div class="skill-category"><h3>🏭 Engineering Competencies</h3><ul><li>ERP / SAP R/3 / SAP NetWeaver</li><li>Lean Manufacturing / Kaizen / 5S / TPM / WCM</li><li>SMED / Process optimization</li><li>Supply chain management / Budget planning</li></ul></div></div></div>
         </div>
 
-        <!-- PROJECTS (6 proje) -->
         <div id="projects" class="content-section">
             <h2 data-lang-key="projects_title">Projeler</h2>
-            <div class="projects-grid">
-                <div class="project-card"><h3>📈 Lisans Tezi: Tam Sayılı Doğrusal Programlama</h3><p>Tedarik ve üretim planlaması optimizasyonu. CPLEX optimum çözümüne %94.86 yakınsama.</p></div>
-                <div class="project-card"><h3>🏭 WCM & TPM Uygulamaları</h3><p>Otonom bakım, 5S, Kaizen ile OEE iyileştirme, plansız duruşların azaltılması.</p></div>
-                <div class="project-card"><h3>📊 Bütçe & Norm Kadro Optimizasyonu</h3><p>Yıllık bütçe planlaması, norm kadro hesaplamaları, kaynak verimliliği %15 artış.</p></div>
-                <div class="project-card"><h3>💻 C# ile Eğitim Yönetim Sistemi</h3><p>800+ çalışanın eğitim takip sistemi; C# ve SQL Server ile geliştirildi, süre %80 azaldı.</p></div>
-                <div class="project-card"><h3>📑 Excel VBA ile Büyük Veri Analizi</h3><p>Makro otomasyonları ve Power Query ile veri işleme süresi %70 azaldı, hata oranı minimize edildi.</p></div>
-                <div class="project-card"><h3>🏭 Facility Planning & Design</h3><p>Akıllı telefon üretim tesisi (120.000 adet/6 ay). Ağırlık merkezi yöntemi ile İran/Şahrbabak lokasyonu, FLAP & CRAFT ile 20 departmanlı yerleşim planlaması. Montaj şeması ve tedarikçi haritası.</p></div>
-            </div>
+            <div data-lang-key="projects_content"><div class="projects-grid"><div class="project-card"><h3>📈 Lisans Tezi: Tam Sayılı Doğrusal Programlama</h3><p>Tedarik ve üretim planlaması optimizasyonu. CPLEX optimum çözümüne %94.86 yakınsama.</p></div><div class="project-card"><h3>🏭 WCM & TPM Uygulamaları</h3><p>Otonom bakım, 5S, Kaizen ile OEE iyileştirme, plansız duruşların azaltılması.</p></div><div class="project-card"><h3>📊 Bütçe & Norm Kadro Optimizasyonu</h3><p>Yıllık bütçe planlaması, norm kadro hesaplamaları, kaynak verimliliği %15 artış.</p></div><div class="project-card"><h3>💻 C# ile Eğitim Yönetim Sistemi</h3><p>800+ çalışanın eğitim takip sistemi; C# ve SQL Server ile geliştirildi, süre %80 azaldı.</p></div><div class="project-card"><h3>📑 Excel VBA ile Büyük Veri Analizi</h3><p>Makro otomasyonları ve Power Query ile veri işleme süresi %70 azaldı, hata oranı minimize edildi.</p></div><div class="project-card"><h3>🏭 Facility Planning & Design</h3><p>Akıllı telefon üretim tesisi (120.000 adet/6 ay). Ağırlık merkezi yöntemi ile İran/Şahrbabak lokasyonu, FLAP & CRAFT ile 20 departmanlı yerleşim planlaması.</p></div></div></div>
+            <div data-lang-key="projects_content_en" style="display:none;"><div class="projects-grid"><div class="project-card"><h3>📈 Bachelor Thesis: Integer Linear Programming</h3><p>Supply and production planning optimization. 94.86% convergence to CPLEX optimal solution.</p></div><div class="project-card"><h3>🏭 WCM & TPM Implementations</h3><p>Autonomous maintenance, 5S, Kaizen for OEE improvement, reduction of unplanned downtime.</p></div><div class="project-card"><h3>📊 Budget & Headcount Optimization</h3><p>Annual budget planning, headcount calculations, resource efficiency increased by 15%.</p></div><div class="project-card"><h3>💻 Training Management System with C#</h3><p>Training tracking system for 800+ employees; developed with C# and SQL Server, process time reduced by 80%.</p></div><div class="project-card"><h3>📑 Big Data Analytics with Excel VBA</h3><p>Macro automation and Power Query reduced data processing time by 70%, error rate minimized.</p></div><div class="project-card"><h3>🏭 Facility Planning & Design</h3><p>Smartphone production facility (120,000 units/6 months). Location selection with center of gravity (Iran/Shahrbabak), FLAP & CRAFT layout planning for 20 departments.</p></div></div></div>
         </div>
 
-        <!-- EDUCATION -->
         <div id="education" class="content-section">
             <h2 data-lang-key="edu_title">Eğitim</h2>
-            <div class="education-item"><h3>Endüstri Mühendisliği (Lisans)</h3><p>Manisa Celal Bayar Üniversitesi | 2015-2018 | 3.42/4</p><p>Tez: Elektronik Firmasında Tedarik ve Üretim Planlaması (Tam Sayılı Programlama)</p></div>
-            <div class="education-item"><h3>Endüstriyel Elektronik (Ön Lisans)</h3><p>Ege Üniversitesi | 1993-1997</p></div>
+            <div data-lang-key="edu_content"><div class="education-item"><h3>Endüstri Mühendisliği (Lisans)</h3><p>Manisa Celal Bayar Üniversitesi | 2015-2018 | 3.42/4</p><p>Tez: Elektronik Firmasında Tedarik ve Üretim Planlaması (Tam Sayılı Programlama)</p></div><div class="education-item"><h3>Endüstriyel Elektronik (Ön Lisans)</h3><p>Ege Üniversitesi | 1993-1997</p></div></div>
+            <div data-lang-key="edu_content_en" style="display:none;"><div class="education-item"><h3>Industrial Engineering (BSc)</h3><p>Manisa Celal Bayar University | 2015-2018 | GPA: 3.42/4</p><p>Thesis: Supply and Production Planning in an Electronics Company (Integer Programming)</p></div><div class="education-item"><h3>Industrial Electronics (Associate)</h3><p>Ege University | 1993-1997</p></div></div>
         </div>
 
-        <!-- CERTIFICATES -->
         <div id="certificates" class="content-section">
             <h2 data-lang-key="cert_title">Sertifikalar</h2>
-            <div class="certs-grid">
-                <div class="cert-item"><h4>APQP/PPAP</h4><p>Sigma Akademi, 2014</p></div>
-                <div class="cert-item"><h4>TPM / Otonom Bakım</h4><p>Vestel TPM Ofis, 2018-2019</p></div>
-                <div class="cert-item"><h4>Querying MS SQL Server</h4><p>Bilge Adam, 2017</p></div>
-                <div class="cert-item"><h4>C# ile Uygulama Geliştirme</h4><p>Bilge Adam, 2017</p></div>
-                <div class="cert-item"><h4>SAP NetWeaver</h4><p>Bilge Adam, 2017</p></div>
-                <div class="cert-item"><h4>HTML Uygulama Geliştirme</h4><p>Bilge Adam, 2017</p></div>
-            </div>
+            <div data-lang-key="cert_content"><div class="certs-grid"><div class="cert-item"><h4>APQP/PPAP</h4><p>Sigma Akademi, 2014</p></div><div class="cert-item"><h4>TPM / Otonom Bakım</h4><p>Vestel TPM Ofis, 2018-2019</p></div><div class="cert-item"><h4>Querying MS SQL Server</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>C# ile Uygulama Geliştirme</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>SAP NetWeaver</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>HTML Uygulama Geliştirme</h4><p>Bilge Adam, 2017</p></div></div></div>
+            <div data-lang-key="cert_content_en" style="display:none;"><div class="certs-grid"><div class="cert-item"><h4>APQP/PPAP</h4><p>Sigma Academy, 2014</p></div><div class="cert-item"><h4>TPM / Autonomous Maintenance</h4><p>Vestel TPM Office, 2018-2019</p></div><div class="cert-item"><h4>Querying MS SQL Server</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>C# Application Development</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>SAP NetWeaver</h4><p>Bilge Adam, 2017</p></div><div class="cert-item"><h4>HTML Development</h4><p>Bilge Adam, 2017</p></div></div></div>
         </div>
 
-        <!-- EXCEL GUIDE SHORTCUT -->
         <div id="excel-guide" class="content-section">
             <h2>📊 Endüstri Mühendisleri İçin Excel Rehberi</h2>
             <p>Detaylı formüller, dinamik tablolar, VBA ipuçları ve örnek senaryolar için <strong><a href="excel.html" class="gold-text" style="text-decoration:underline;">Excel Rehber Sayfasına</a></strong> göz atın.</p>
         </div>
 
-        <!-- CONTACT -->
         <div id="contact" class="content-section">
             <h2 data-lang-key="contact_title">İletişim</h2>
             <div class="contact-info"><p>📞 +90 (532) 481 91 10</p><p>✉️ <a href="mailto:sambulenterdas@gmail.com">sambulenterdas@gmail.com</a></p><p>📍 İzmir, Karşıyaka</p><p>🔗 <a href="https://www.linkedin.com/in/sami-bülent-erdaş-5b468b62" target="_blank">LinkedIn</a> | 📱 <a href="https://www.instagram.com/smblntrds" target="_blank">Instagram</a> | 💻 <a href="https://github.com/samierdas" target="_blank">GitHub</a></p></div>
@@ -358,7 +314,6 @@
 </div>
 
 <script>
-    // Dil verileri (Türkçe ve İngilizce)
     const translations = {
         tr: {
             menu_home: "Ana Sayfa", menu_cover: "Ön Yazı", menu_about: "Hakkımda", menu_exp: "Deneyim", menu_skills: "Yetenekler", menu_projects: "Projeler", menu_edu: "Eğitim", menu_cert: "Sertifikalar", menu_excel: "Excel Rehber", menu_contact: "İletişim",
@@ -377,6 +332,23 @@
             const key = el.getAttribute("data-lang-key");
             if(translations[lang] && translations[lang][key]) el.innerText = translations[lang][key];
         });
+        // İçerik bloklarını göster/gizle
+        document.querySelectorAll("[data-lang-key]").forEach(el => {
+            if(el.getAttribute("data-lang-key") === "cover_text1") el.style.display = lang === "tr" ? "block" : "none";
+            if(el.getAttribute("data-lang-key") === "cover_text2") el.style.display = lang === "en" ? "block" : "none";
+        });
+        document.querySelectorAll("[data-lang-key='about_text']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='about_text_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='exp_content']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='exp_content_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='skills_content']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='skills_content_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='projects_content']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='projects_content_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='edu_content']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='edu_content_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='cert_content']").forEach(el => el.style.display = lang === "tr" ? "block" : "none");
+        document.querySelectorAll("[data-lang-key='cert_content_en']").forEach(el => el.style.display = lang === "en" ? "block" : "none");
         currentLang = lang;
         localStorage.setItem("siteLang", lang);
     }
@@ -387,7 +359,6 @@
     if(savedLang && translations[savedLang]) applyLanguage(savedLang);
     else applyLanguage("tr");
 
-    // Section navigation
     const sections = document.querySelectorAll(".content-section");
     const navBtns = document.querySelectorAll(".nav-btn");
     function showSection(sectionId) {
