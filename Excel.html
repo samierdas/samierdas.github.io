@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Rehber | Sami Bülent Erdaş</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: #0f0f0f;
+            border-right: 1px solid #d4af37;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            flex-shrink: 0;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        .sidebar-header h2 {
+            color: #d4af37;
+            font-size: 1.3rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 1px solid #2a2a2a;
+            color: #eee;
+            padding: 0.8rem 1rem;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-btn:hover {
+            background-color: #d4af37;
+            color: #0a0a0a;
+            border-color: #d4af37;
+        }
+
+        /* Main */
+        .main-content {
+            flex: 1;
+            overflow-x: hidden;
+        }
+
+        .top-bar {
+            background-color: #0f0f0f;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 0.8rem;
+            cursor: pointer;
+        }
+
+        .lang-flag {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #d4af37;
+        }
+
+        .content-section {
+            padding: 2rem 2.5rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 1.5rem 0 1rem;
+            border-left: 4px solid #d4af37;
+            padding-left: 1rem;
+        }
+
+        .formula-card, .scenario-card {
+            background: #111;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .formula-card code {
+            background: #1e1e1e;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: monospace;
+            color: #d4af37;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gold-text {
+            color: #d4af37;
+        }
+
+        hr {
+            border-color: #2a2a2a;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 1px solid #d4af37;
+            }
+            .nav-menu {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .nav-btn {
+                font-size: 0.8rem;
+                padding: 0.5rem 0.8rem;
+            }
+            .content-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Excel Rehber</h2>
+            <p>Endüstri Mühendisleri İçin</p>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-btn">🏠 Ana Sayfaya Dön</a>
+            <a href="index.html#excel-guide" class="nav-btn">📊 Projeler</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="top-bar">
+            <div class="lang-selector">
+                <img src="https://flagcdn.com/w40/tr.png" alt="TR" class="lang-flag" data-lang="tr">
+                <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag" data-lang="en">
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h1 id="main-title">📊 Endüstri Mühendisleri İçin Excel Rehberi</h1>
+            <p id="main-desc">Büyük veri setleri, dinamik formüller, VBA otomasyonları ve gerçek senaryolarla Excel'i maksimum verimle kullanın.</p>
+
+            <!-- Kategori: Veri Analiz -->
+            <h2 id="cat1">🔍 Veri Analiz & Özetleme</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>=SUMIFS(toplam_aralık, kriter_aralık1, kriter1, ...)</code><p>Çoklu koşula göre toplama. Stok analizi, satış raporları.</p></div>
+                <div class="formula-card"><code>=COUNTIFS(kriter_aralık1, kriter1, ...)</code><p>Koşullu sayma. Hata oranı, kalite kusur sayısı.</p></div>
+                <div class="formula-card"><code>=AVERAGEIFS(ortalama_aralık, kriter_aralık1, kriter1)</code><p>Koşullu ortalama. Verimlilik ortalamaları.</p></div>
+                <div class="formula-card"><code>=UNIQUE(dizi)</code><p>Tekil değerleri listeleme. Benzersiz ürün/hammadde kodları.</p></div>
+                <div class="formula-card"><code>=SORT(dizi, sütun, sıra)</code><p>Sıralama. Kapasite raporları, önceliklendirme.</p></div>
+                <div class="formula-card"><code>=FILTER(dizi, koşul, [boşsa])</code><p>Dinamik filtreleme. Üretim emirleri, stok hareketleri.</p></div>
+            </div>
+
+            <h2 id="cat2">🔎 Arama & Başvuru</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>=XLOOKUP(aranan, arama_dizisi, dönüş_dizisi)</code><p>Modern arama. BOM maliyet çekme, parça fiyatları.</p></div>
+                <div class="formula-card"><code>=INDEX(aralık; KAÇINCI(aranan; arama_aralığı; 0))</code><p>Esnek arama (eski ama güçlü).</p></div>
+                <div class="formula-card"><code>=MATCH(aranan; dizi; 0)</code><p>Pozisyon bulma. Planlama tablolarında satır numarası.</p></div>
+            </div>
+
+            <h2 id="cat3">⚙️ Mantıksal & Hata Yönetimi</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>=IF(koşul; doğruysa; yanlışsa)</code><p>Karar ağaçları. "Eğer stok < güvenlik_stoku ise SİPARİŞ VER".</p></div>
+                <div class="formula-card"><code>=IFS(koşul1; değer1; koşul2; değer2)</code><p>Çoklu koşul. Performans sınıflandırma (A-B-C).</p></div>
+                <div class="formula-card"><code>=IFERROR(formül; hata_durumunda)</code><p>Hata temizleme. Bölme işlemlerinde #SAYI/0! önleme.</p></div>
+            </div>
+
+            <h2 id="cat4">📅 Tarih & Zaman (Planlama)</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>=NETWORKDAYS(başlangıç; bitiş; [tatiller])</code><p>İş günü sayısı. Teslim süresi hesaplama.</p></div>
+                <div class="formula-card"><code>=WORKDAY(başlangıç; gün; [tatiller])</code><p>İş günü ekleme. Üretim bitiş tarihi.</p></div>
+                <div class="formula-card"><code>=EDATE(tarih; ay)</code><p>Ay ekleme. Tedarik süresi planları.</p></div>
+            </div>
+
+            <h2 id="cat5">📈 İstatistik & Matematik</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>=SUMPRODUCT(dizi1; dizi2)</code><p>Ağırlıklı toplam. Stok devir hızı, maliyet hesapları.</p></div>
+                <div class="formula-card"><code>=LARGE(dizi; k)</code><p>En büyük k değeri. En çok hata yapan ürünler.</p></div>
+                <div class="formula-card"><code>=RANK.EQ(sayı; dizi; [sıralama])</code><p>Sıralama. Verimlilik sıralaması.</p></div>
+            </div>
+
+            <h2 id="cat6">⚡ Dizi Formülleri & Dinamik Diziler</h2>
+            <div class="grid-2">
+                <div class="formula-card"><code>{=TOPLA( (aralık1=kriter1) * (aralık2=kriter2) * toplam_aralık )}</code><p>Çoklu koşul dinamik toplam.</p></div>
+                <div class="formula-card"><code>=SEQUENCE(satır; sütun; başlangıç; adım)</code><p>Otomatik seri oluşturma. Günlük üretim planı.</p></div>
+                <div class="formula-card"><code>=TRANSPOSE(dizi)</code><p>Veri döndürme. Rapor formatları.</p></div>
+            </div>
+
+            <h2 id="cat7">🔧 VBA / Makro ile Otomasyon</h2>
+            <div class="formula-card">
+                <code>Sub VeriTemizle()<br>
+                Range("A1:Z1000").SpecialCells(xlCellTypeBlanks).Delete<br>
+                End Sub</code>
+                <p>Tek tıkla boş hücreleri temizleme, rapor birleştirme, tekrarlayan işleri saniyelerde bitirme.</p>
+            </div>
+
+            <hr>
+
+            <h2 id="scenario-title">🏭 Endüstri Mühendisliği Senaryoları</h2>
+            <div class="scenario-card">
+                <h3>📦 Stok Takibi & ABC Analizi</h3>
+                <p>Dinamik tablo + <code>=SORT(FILTER(...))</code> ile yıllık tüketim değerine göre A-B-C sınıflandırması. Stok devir hızı = <code>=SATIŞLAR / ORTALAMA_STOK</code></p>
+            </div>
+            <div class="scenario-card">
+                <h3>⚙️ Kapasite Kullanım Oranı</h3>
+                <p><code>=ÜRETİM_MİKTARI / (KAPASİTE * GÜN_SAYISI)</code> + Koşullu biçimlendirme ile kritik darboğazları renklendirme.</p>
+            </div>
+            <div class="scenario-card">
+                <h3>📈 Talep Tahmini (Basit Hareketli Ortalama)</h3>
+                <p><code>=ORTALAMA(son_3_ay_talep)</code> + <code>=TAHMİN.ÜSEL</code> ile öngörü. Power Query ile geçmiş veri temizleme.</p>
+            </div>
+            <div class="scenario-card">
+                <h3>💰 Birim Maliyet & Başabaş Noktası</h3>
+                <p>Dinamik duyarlılık tablosu (Veri Tablosu) ile fiyat/hacim değişimlerinde başabaş noktası anlık güncelleme.</p>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="index.html" class="nav-btn" style="display: inline-block; background:#d4af37; color:#0a0a0a; font-weight: bold;">← Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const translationsExcel = {
+        tr: {
+            title: "📊 Endüstri Mühendisleri İçin Excel Rehberi",
+            desc: "Büyük veri setleri, dinamik formüller, VBA otomasyonları ve gerçek senaryolarla Excel'i maksimum verimle kullanın.",
+            cat1: "🔍 Veri Analiz & Özetleme",
+            cat2: "🔎 Arama & Başvuru",
+            cat3: "⚙️ Mantıksal & Hata Yönetimi",
+            cat4: "📅 Tarih & Zaman (Planlama)",
+            cat5: "📈 İstatistik & Matematik",
+            cat6: "⚡ Dizi Formülleri & Dinamik Diziler",
+            cat7: "🔧 VBA / Makro ile Otomasyon",
+            scenario_title: "🏭 Endüstri Mühendisliği Senaryoları"
+        },
+        en: {
+            title: "📊 Excel Guide for Industrial Engineers",
+            desc: "Master Excel with large datasets, dynamic formulas, VBA automation, and real-world IE scenarios.",
+            cat1: "🔍 Data Analysis & Summarization",
+            cat2: "🔎 Lookup & Reference",
+            cat3: "⚙️ Logical & Error Handling",
+            cat4: "📅 Date & Time (Scheduling)",
+            cat5: "📈 Statistics & Math",
+            cat6: "⚡ Array Formulas & Dynamic Arrays",
+            cat7: "🔧 VBA / Macro Automation",
+            scenario_title: "🏭 Industrial Engineering Scenarios"
+        }
+    };
+    let currentLang = "tr";
+    function applyLang(lang) {
+        document.getElementById("main-title").innerText = translationsExcel[lang].title;
+        document.getElementById("main-desc").innerText = translationsExcel[lang].desc;
+        document.getElementById("cat1").innerText = translationsExcel[lang].cat1;
+        document.getElementById("cat2").innerText = translationsExcel[lang].cat2;
+        document.getElementById("cat3").innerText = translationsExcel[lang].cat3;
+        document.getElementById("cat4").innerText = translationsExcel[lang].cat4;
+        document.getElementById("cat5").innerText = translationsExcel[lang].cat5;
+        document.getElementById("cat6").innerText = translationsExcel[lang].cat6;
+        document.getElementById("cat7").innerText = translationsExcel[lang].cat7;
+        document.getElementById("scenario-title").innerText = translationsExcel[lang].scenario_title;
+        currentLang = lang;
+        localStorage.setItem("excelLang", lang);
+    }
+    document.querySelectorAll(".lang-flag").forEach(flag => {
+        flag.addEventListener("click", () => applyLang(flag.getAttribute("data-lang")));
+    });
+    const saved = localStorage.getItem("excelLang");
+    if(saved && translationsExcel[saved]) applyLang(saved);
+    else applyLang("tr");
+</script>
+</body>
+</html>
