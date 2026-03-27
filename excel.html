@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Rehber | Sami Bülent Erdaş</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+        .app-container { display: flex; min-height: 100vh; }
+        .sidebar {
+            width: 280px;
+            background-color: #0f0f0f;
+            border-right: 1px solid #d4af37;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2rem 1rem;
+            flex-shrink: 0;
+        }
+        .sidebar-header { text-align: center; margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 1rem; }
+        .sidebar-header h2 { color: #d4af37; font-size: 1.3rem; }
+        .nav-menu { display: flex; flex-direction: column; gap: 0.5rem; }
+        .nav-btn {
+            background: transparent;
+            border: 1px solid #2a2a2a;
+            color: #eee;
+            padding: 0.8rem 1rem;
+            text-align: left;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .nav-btn:hover { background-color: #d4af37; color: #0a0a0a; border-color: #d4af37; }
+        .main-content { flex: 1; overflow-x: hidden; }
+        .top-bar {
+            background-color: #0f0f0f;
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .lang-selector { display: flex; gap: 0.8rem; cursor: pointer; }
+        .lang-flag { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1px solid #d4af37; }
+        .content-section { padding: 2rem 2.5rem; }
+        h1 { font-size: 2rem; margin-bottom: 1rem; color: #d4af37; }
+        h2 { font-size: 1.6rem; margin: 1.5rem 0 1rem; border-left: 4px solid #d4af37; padding-left: 1rem; }
+        .formula-card, .scenario-card {
+            background: #111;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .formula-card code { background: #1e1e1e; padding: 0.2rem 0.5rem; border-radius: 6px; font-family: monospace; color: #d4af37; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .gold-text { color: #d4af37; }
+        @media (max-width: 768px) {
+            .app-container { flex-direction: column; }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid #d4af37; }
+            .nav-menu { flex-direction: row; flex-wrap: wrap; }
+            .nav-btn { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
+            .content-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Excel Rehber</h2>
+            <p id="sidebar-sub">Endüstri Mühendisleri İçin</p>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-btn" id="back-home">🏠 Ana Sayfaya Dön</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <div class="lang-selector">
+                <img src="https://flagcdn.com/w40/tr.png" alt="TR" class="lang-flag" data-lang="tr">
+                <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-flag" data-lang="en">
+            </div>
+        </div>
+        <div class="content-section">
+            <h1 id="main-title">📊 Endüstri Mühendisleri İçin Excel Rehberi</h1>
+            <p id="main-desc">Büyük veri setleri, dinamik formüller, VBA otomasyonları ve gerçek senaryolarla Excel'i maksimum verimle kullanın.</p>
+
+            <h2 id="cat1">🔍 Veri Analiz & Özetleme</h2>
+            <div class="grid-2" id="cat1-content">
+                <div class="formula-card"><code>=SUMIFS(toplam_aralık, kriter_aralık1, kriter1, ...)</code><p>Çoklu koşula göre toplama. Stok analizi, satış raporları.</p></div>
+                <div class="formula-card"><code>=COUNTIFS(kriter_aralık1, kriter1, ...)</code><p>Koşullu sayma. Hata oranı, kalite kusur sayısı.</p></div>
+                <div class="formula-card"><code>=AVERAGEIFS(ortalama_aralık, kriter_aralık1, kriter1)</code><p>Koşullu ortalama. Verimlilik ortalamaları.</p></div>
+                <div class="formula-card"><code>=UNIQUE(dizi)</code><p>Tekil değerleri listeleme. Benzersiz ürün/hammadde kodları.</p></div>
+                <div class="formula-card"><code>=SORT(dizi, sütun, sıra)</code><p>Sıralama. Kapasite raporları, önceliklendirme.</p></div>
+                <div class="formula-card"><code>=FILTER(dizi, koşul, [boşsa])</code><p>Dinamik filtreleme. Üretim emirleri, stok hareketleri.</p></div>
+            </div>
+
+            <h2 id="cat2">🔎 Arama & Başvuru</h2>
+            <div class="grid-2" id="cat2-content">
+                <div class="formula-card"><code>=XLOOKUP(aranan, arama_dizisi, dönüş_dizisi)</code><p>Modern arama. BOM maliyet çekme, parça fiyatları.</p></div>
+                <div class="formula-card"><code>=INDEX(aralık; KAÇINCI(aranan; arama_aralığı; 0))</code><p>Esnek arama (eski ama güçlü).</p></div>
+                <div class="formula-card"><code>=MATCH(aranan; dizi; 0)</code><p>Pozisyon bulma. Planlama tablolarında satır numarası.</p></div>
+            </div>
+
+            <h2 id="cat7">🔧 VBA / Makro ile Otomasyon</h2>
+            <div class="formula-card" id="vba-content">
+                <code>Sub VeriTemizle()<br>
+                Range("A1:Z1000").SpecialCells(xlCellTypeBlanks).Delete<br>
+                End Sub</code>
+                <p>Tek tıkla boş hücreleri temizleme, rapor birleştirme, tekrarlayan işleri saniyelerde bitirme.</p>
+            </div>
+
+            <hr>
+
+            <h2 id="scenario-title">🏭 Endüstri Mühendisliği Senaryoları</h2>
+            <div id="scenarios-content">
+                <div class="scenario-card"><h3>📦 Stok Takibi & ABC Analizi</h3><p>Dinamik tablo + <code>=SORT(FILTER(...))</code> ile yıllık tüketim değerine göre A-B-C sınıflandırması. Stok devir hızı = <code>=SATIŞLAR / ORTALAMA_STOK</code></p></div>
+                <div class="scenario-card"><h3>⚙️ Kapasite Kullanım Oranı</h3><p><code>=ÜRETİM_MİKTARI / (KAPASİTE * GÜN_SAYISI)</code> + Koşullu biçimlendirme ile kritik darboğazları renklendirme.</p></div>
+                <div class="scenario-card"><h3>📈 Talep Tahmini (Basit Hareketli Ortalama)</h3><p><code>=ORTALAMA(son_3_ay_talep)</code> + <code>=TAHMİN.ÜSEL</code> ile öngörü. Power Query ile geçmiş veri temizleme.</p></div>
+                <div class="scenario-card"><h3>💰 Birim Maliyet & Başabaş Noktası</h3><p>Dinamik duyarlılık tablosu (Veri Tablosu) ile fiyat/hacim değişimlerinde başabaş noktası anlık güncelleme.</p></div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <a href="index.html" class="nav-btn" style="display: inline-block; background:#d4af37; color:#0a0a0a; font-weight: bold;">← Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const excelTranslations = {
+        tr: {
+            sidebar_sub: "Endüstri Mühendisleri İçin",
+            back_home: "🏠 Ana Sayfaya Dön",
+            title: "📊 Endüstri Mühendisleri İçin Excel Rehberi",
+            desc: "Büyük veri setleri, dinamik formüller, VBA otomasyonları ve gerçek senaryolarla Excel'i maksimum verimle kullanın.",
+            cat1: "🔍 Veri Analiz & Özetleme",
+            cat2: "🔎 Arama & Başvuru",
+            cat7: "🔧 VBA / Makro ile Otomasyon",
+            scenario_title: "🏭 Endüstri Mühendisliği Senaryoları",
+            vba_text: "Tek tıkla boş hücreleri temizleme, rapor birleştirme, tekrarlayan işleri saniyelerde bitirme."
+        },
+        en: {
+            sidebar_sub: "For Industrial Engineers",
+            back_home: "🏠 Back to Home",
+            title: "📊 Excel Guide for Industrial Engineers",
+            desc: "Master Excel with large datasets, dynamic formulas, VBA automation, and real-world IE scenarios.",
+            cat1: "🔍 Data Analysis & Summarization",
+            cat2: "🔎 Lookup & Reference",
+            cat7: "🔧 VBA / Macro Automation",
+            scenario_title: "🏭 Industrial Engineering Scenarios",
+            vba_text: "Clean blank cells, merge reports, automate repetitive tasks in seconds with one click."
+        }
+    };
+    function applyExcelLang(lang) {
+        document.getElementById("sidebar-sub").innerText = excelTranslations[lang].sidebar_sub;
+        document.getElementById("back-home").innerHTML = excelTranslations[lang].back_home;
+        document.getElementById("main-title").innerText = excelTranslations[lang].title;
+        document.getElementById("main-desc").innerText = excelTranslations[lang].desc;
+        document.getElementById("cat1").innerText = excelTranslations[lang].cat1;
+        document.getElementById("cat2").innerText = excelTranslations[lang].cat2;
+        document.getElementById("cat7").innerText = excelTranslations[lang].cat7;
+        document.getElementById("scenario-title").innerText = excelTranslations[lang].scenario_title;
+        document.querySelector("#vba-content p").innerText = excelTranslations[lang].vba_text;
+        localStorage.setItem("excelLang", lang);
+    }
+    document.querySelectorAll(".lang-flag").forEach(flag => {
+        flag.addEventListener("click", () => applyExcelLang(flag.getAttribute("data-lang")));
+    });
+    const saved = localStorage.getItem("excelLang");
+    applyExcelLang(saved && excelTranslations[saved] ? saved : "tr");
+</script>
+</body>
+</html>
